@@ -15,7 +15,7 @@ Start at 1:10:29
 // Multiple element
 // console.log(document.querySelectorAll('.item'));
 //console.log(getElementsByClassName('li'))
-
+//console.log(document.getElementsByTagName('li));
 const ul = document.querySelector('.items');
 
 // ul.remove();
@@ -23,13 +23,13 @@ const ul = document.querySelector('.items');
 // ul.lastElementChild.remove();
 //ul.firstElementChild.textContent = 'Hello';
 //ul.children[1].innerText = 'Brad';
-//ul.lastElementChild.innerHTML = '<h1>Hello</h1>';
-const myForm = document.querySelector('#myform');
+//ul.lastElementChild.innerHTML = '<h1>Have a good day</h1>';
+const myForm = document.querySelector('#my-form');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const msg = document.querySelector('.msg');
 const userList = document.querySelector('#my-form');
-myForm.addEventListener('submit', onSubmit);
+myForm.addEventListener('submit', onsubmit);
 const btn = document.querySelector('.btn');
 btn.getElementsByClassName.background = 'red';
 btn.addEventListener('click',(e) =>{
@@ -38,8 +38,10 @@ btn.addEventListener('click',(e) =>{
     document.querySelector('#my-form').style.background = '#ccc';
     document.querySelector('body').classList.add('bg-dark');
     document.querySelector('.items')
-    .lastElementChild.innerHTML = '<h1>Hello</h1>'
-
+    ul.firstElementChild.textContent = 'Hello';
+    ul.children[1].innerText = 'You';
+    ul.lastElementChild.innerHTML = '<h5>Have a good day</h5>';
+});
     if(nameInput.value === '' || emailInput.value === ''){
         msg.classList.add('error');
         msg.innerHTML = 'Please enter all fields';
@@ -55,4 +57,3 @@ btn.addEventListener('click',(e) =>{
         nameInput.value = '';
         emailInput.value = '';
     }
-});
